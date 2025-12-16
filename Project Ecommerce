@@ -1,0 +1,84 @@
+products = {
+    1: ("Laptop", 80000),
+    2: ("Mobile", 30000),
+    3: ("Headphones", 2000),
+    4: ("Keyboard", 1500)
+}
+
+cart = {}
+
+def get_int_input(message):
+    while True:
+        try:
+            return int(input(message))
+        except ValueError:
+            print("Please enter a valid number.")
+
+def show_products():
+    print("\nAvailable Products:")
+    for pid, (name, price) in products.items():
+        print(f"{pid}. {name} - Rs {price}")
+
+def add_to_cart():
+    show_products()
+    pid = get_int_input("Enter product ID to add: ")
+    if pid in products:
+        qty = get_int_input("Enter quantity: ")
+        cart[pid] = cart.get(pid, 0) + qty
+        print("Product added to cart.")
+    else:
+        print("Invalid product ID.")
+
+def remove_from_cart():
+    pid = get_int_input("Enter product ID to remove: ")
+    if pid in cart:
+        del cart[pid]
+        print("Product removed from cart.")
+    else:
+        print("Product not found in cart.")
+
+def view_cart():
+    if not cart:
+        print("Cart is empty.")
+        return
+
+    total = 0
+    print("\nYour Cart:")
+    for pid, qty in cart.items():
+        name, price = products[pid]
+        cost = price * qty
+        total += cost
+        print(f"{name} x {qty} = Rs {cost}")
+
+    print("Total Amount: Rs", total)
+
+def checkout():
+    view_cart()
+    print("\nThank you for shopping!")
+    exit()
+
+def menu():
+    while True:
+        print("\n--- E-commerce Menu ---")
+        print("1. View Products")
+        print("2. Add to Cart")
+        print("3. Remove from Cart")
+        print("4. View Cart")
+        print("5. Checkout")
+
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            show_products()
+        elif choice == "2":
+            add_to_cart()
+        elif choice == "3":
+            remove_from_cart()
+        elif choice == "4":
+            view_cart()
+        elif choice == "5":
+            checkout()
+        else:
+            print("Invalid choice. Try again.")
+
+menu()
