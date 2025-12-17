@@ -1,0 +1,4 @@
+student_name = input("Enter student name: ")
+course = input("Enter course name: ")
+
+print(student_name, "has registered for", course)
