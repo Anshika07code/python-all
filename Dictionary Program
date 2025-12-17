@@ -1,0 +1,9 @@
+student = {
+    "name": "Ram",
+    "roll": 1,
+    "marks": 85
+}
+
+print("Name:", student["name"])
+print("Roll:", student["roll"])
+print("Marks:", student["marks"])
