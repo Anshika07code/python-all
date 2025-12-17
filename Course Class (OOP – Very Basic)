@@ -1,0 +1,11 @@
+class Course:
+    def __init__(self, cid, name, fee):
+        self.cid = cid
+        self.name = name
+        self.fee = fee
+
+    def display(self):
+        print(self.cid, self.name, self.fee)
+
+c1 = Course("C101", "Python", 5000)
+c1.display()
