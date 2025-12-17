@@ -1,0 +1,11 @@
+courses = []
+
+n = int(input("How many courses you want to add? "))
+
+for i in range(n):
+    course = input("Enter course name: ")
+    courses.append(course)
+
+print("\nCourse List:")
+for c in courses:
+    print(c)
