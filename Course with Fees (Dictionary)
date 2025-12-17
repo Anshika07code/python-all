@@ -1,0 +1,8 @@
+courses = {
+    "Python": 5000,
+    "Java": 6000,
+    "C": 4000
+}
+
+for course, fee in courses.items():
+    print(course, ":", fee)
