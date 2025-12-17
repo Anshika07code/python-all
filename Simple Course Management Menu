@@ -1,0 +1,24 @@
+courses = []
+
+while True:
+    print("\n1. Add Course")
+    print("2. View Courses")
+    print("3. Exit")
+
+    choice = input("Enter choice: ")
+
+    if choice == "1":
+        course = input("Enter course name: ")
+        courses.append(course)
+        print("Course added")
+
+    elif choice == "2":
+        print("Courses:")
+        for c in courses:
+            print(c)
+
+    elif choice == "3":
+        break
+
+    else:
+        print("Invalid choice")
