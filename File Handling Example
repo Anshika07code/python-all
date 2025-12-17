@@ -1,0 +1,7 @@
+file = open("data.txt", "w")
+file.write("Python File Handling Example")
+file.close()
+
+file = open("data.txt", "r")
+print(file.read())
+file.close()
