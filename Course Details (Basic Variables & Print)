@@ -1,0 +1,9 @@
+course_id = "CS101"
+course_name = "Python Programming"
+duration = "3 Months"
+fees = 5000
+
+print("Course ID:", course_id)
+print("Course Name:", course_name)
+print("Duration:", duration)
+print("Fees:", fees)
