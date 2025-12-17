@@ -1,0 +1,7 @@
+course_id = input("Enter Course ID: ")
+course_name = input("Enter Course Name: ")
+duration = input("Enter Course Duration: ")
+fees = int(input("Enter Course Fees: "))
+
+print("\nCourse Details")
+print(course_id, course_name, duration, fees)
