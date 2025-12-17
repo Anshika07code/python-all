@@ -1,0 +1,81 @@
+class Student:
+    def __init__(self, sid, name, grade):
+        self.sid = sid
+        self.name = name
+        self.grade = grade
+
+    def display(self):
+        print(self.sid, self.name, self.grade)
+
+
+class Teacher:
+    def __init__(self, tid, name, subject):
+        self.tid = tid
+        self.name = name
+        self.subject = subject
+
+    def display(self):
+        print(self.tid, self.name, self.subject)
+
+
+students = []
+teachers = []
+
+
+def add_student():
+    sid = input("Enter Student ID: ")
+    name = input("Enter Student Name: ")
+    grade = input("Enter Grade/Class: ")
+    students.append(Student(sid, name, grade))
+    print("Student added successfully!")
+
+
+def view_students():
+    if not students:
+        print("No students found")
+    else:
+        print("ID   Name   Grade")
+        for s in students:
+            s.display()
+
+
+def add_teacher():
+    tid = input("Enter Teacher ID: ")
+    name = input("Enter Teacher Name: ")
+    subject = input("Enter Subject: ")
+    teachers.append(Teacher(tid, name, subject))
+    print("Teacher added successfully!")
+
+
+def view_teachers():
+    if not teachers:
+        print("No teachers found")
+    else:
+        print("ID   Name   Subject")
+        for t in teachers:
+            t.display()
+
+
+while True:
+    print("\n--- School Management System ---")
+    print("1. Add Student")
+    print("2. View Students")
+    print("3. Add Teacher")
+    print("4. View Teachers")
+    print("5. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        add_student()
+    elif choice == "2":
+        view_students()
+    elif choice == "3":
+        add_teacher()
+    elif choice == "4":
+        view_teachers()
+    elif choice == "5":
+        print("Thank you!")
+        break
+    else:
+        print("Invalid choice")
