@@ -1,0 +1,3 @@
+rate = float(input("Enter conversion rate (1 USD = ?): "))
+usd = float(input("Enter USD amount: "))
+print(f"{usd} USD = {usd*rate}")
