@@ -1,0 +1,2 @@
+s = input("Enter string: ")
+print("First:", s[0], "Last:", s[-1])
