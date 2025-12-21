@@ -1,0 +1,10 @@
+filename = input("Enter filename: ") + ".txt"
+content = input("Write something: ")
+
+# Write to file
+with open(filename, "w") as file:
+    file.write(content)
+
+# Read file
+with open(filename, "r") as file:
+    print("File content:", file.read())
