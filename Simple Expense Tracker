@@ -1,0 +1,11 @@
+expenses = []
+
+while True:
+    choice = input("Add/View/Exit (a/v/e): ").lower()
+    if choice == "a":
+        amount = float(input("Enter amount: "))
+        expenses.append(amount)
+    elif choice == "v":
+        print("Expenses:", expenses, "Total:", sum(expenses))
+    elif choice == "e":
+        break
