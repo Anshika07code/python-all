@@ -1,0 +1,22 @@
+contacts = {}
+
+def menu():
+    print("\n1. Add Contact\n2. View Contacts\n3. Search Contact\n4. Exit")
+
+while True:
+    menu()
+    choice = input("Choose: ")
+    
+    if choice == "1":
+        name = input("Enter name: ")
+        phone = input("Enter phone number: ")
+        contacts[name] = phone
+    elif choice == "2":
+        print(contacts)
+    elif choice == "3":
+        name = input("Enter name to search: ")
+        print(contacts.get(name, "Not found"))
+    elif choice == "4":
+        break
+    else:
+        print("Invalid option")
