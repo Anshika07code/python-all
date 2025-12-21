@@ -1,0 +1,19 @@
+word = "python"
+guessed = ["_"] * len(word)
+tries = 6
+
+while tries > 0 and "_" in guessed:
+    print(" ".join(guessed))
+    guess = input("Guess a letter: ").lower()
+    if guess in word:
+        for i, letter in enumerate(word):
+            if letter == guess:
+                guessed[i] = guess
+    else:
+        tries -= 1
+        print("Wrong! Tries left:", tries)
+
+if "_" not in guessed:
+    print("You won! Word:", word)
+else:
+    print("You lost! Word was:", word)
