@@ -1,0 +1,1 @@
+df.loc[df["Name"] == "Ram", "Marks"] = 95
