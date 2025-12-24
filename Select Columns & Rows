@@ -1,0 +1,5 @@
+df["Name"]                 # single column
+df[["Name", "Marks"]]      # multiple columns
+
+df.iloc[0]                 # first row
+df.iloc[0:2]               # row range
