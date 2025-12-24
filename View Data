@@ -1,0 +1,4 @@
+df.head()      # first 5 rows
+df.tail()      # last 5 rows
+df.info()      # structure
+df.describe()  # statistics
