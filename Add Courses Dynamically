@@ -1,4 +1,4 @@
- courses = []
+courses = []
 
 n = int(input("How many courses you want to add? "))
 
